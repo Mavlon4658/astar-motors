@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: 'Idealist sans';
+    src: url('../fonts/idealist-sans.regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Druk text wide';
+    src: url('../fonts/Druk\ Text\ Wide\ Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Druk text wide cyr';
+    src: url('../fonts/druktextwidecyr-medium.otf');
+    font-weight: 500;
+}
+
+.container {
+    @apply max-w-[1408px] mx-auto
+}
+
+@media (max-width: 1440px) {
+    .container {
+        @apply max-w-[calc(100%_-_40px)]
+    }
+}
+
+.btn-red {
+    @apply bg-[#DC2626] text-white rounded-lg outline-none items-center text-lg
+}
+
+.btn-light-border {
+    @apply bg-transparent outline-none border border-slate-100 rounded-lg items-center text-lg
+}
+
+.btn-dark-border {
+    @apply bg-transparent outline-none border border-stone-500 rounded-lg items-center text-lg text-stone-600
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @apply appearance-none w-full  h-[6px] outline-none rounded-full cursor-pointer
+}
+
+input[type=range]::-ms-track {
+    @apply bg-transparent text-transparent
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @apply appearance-none h-6 w-6 rounded-full bg-red-700
+}
+
+input[type="range"]::-moz-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @apply appearance-none h-6 w-6 rounded-full bg-red-700
+}
+
+.form-checkbox label {
+    @apply cursor-pointer border border-stone-400 w-6 h-6 flex-shrink-0 block rounded-md relative
+}
+
+.form-checkbox label::before {
+    content: "";
+    @apply w-4 h-4 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-stone-400 rounded
+}
+
+.form-checkbox input:checked ~ label::before {
+    @apply bg-red-600
+}
