@@ -888,6 +888,10 @@ video {
   margin-top: 0.75rem;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -2450,6 +2454,10 @@ video {
   padding-top: 1rem;
 }
 
+.pr-0 {
+  padding-right: 0px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2556,6 +2564,11 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -3404,6 +3417,14 @@ input[type="range"]::-moz-slider-thumb {
     margin-top: 1.5rem;
   }
 
+  .xl\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .xl\:mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
   .xl\:flex {
     display: flex;
   }
@@ -3463,6 +3484,10 @@ input[type="range"]::-moz-slider-thumb {
     padding-bottom: 45px;
   }
 
+  .xl\:pr-16 {
+    padding-right: 4rem;
+  }
+
   .xl\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -3471,6 +3496,16 @@ input[type="range"]::-moz-slider-thumb {
   .xl\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
