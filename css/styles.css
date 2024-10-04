@@ -32,6 +32,12 @@
     }
 }
 
+@media (max-width: 991px) {
+    .container {
+        @apply max-w-[calc(100%_-_30px)]
+    }
+}
+
 .btn-red {
     @apply bg-[#DC2626] text-white rounded-lg outline-none items-center text-lg
 }
