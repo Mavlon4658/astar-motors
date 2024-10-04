@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body class="font-idealist-sans font-normal bg-stone-200">
+<body class="font-idealist-sans font-normal bg-stone-200 body">
 
     <div class="w-full overflow-hidden">
 
         <header class="absolute z-[2] xl:top-14 top-10 left-0 w-full">
             <div class="container xl:px-14 px-7 text-white">
                 <div class="flex items-center justify-between">
-                    <a href="/">
+                    <a href="/" class="relative z-40">
                         <img src="./images/header-logo.svg" alt="">
                     </a>
                     <ul class="lg:flex hidden items-center gap-6 text-sm uppercase">
@@ -33,12 +34,45 @@
                             <a href="#">Контакты</a>
                         </li>
                     </ul>
-                    <a href="#" class="btn-red flex items-center gap-[10px] h-11 xl:px-6 px-4">
-                        <img src="./images/phone.svg" alt="">
+                    <a href="#" class="btn-red lg:flex hidden items-center gap-[10px] h-11 xl:px-6 px-4">
+                        <img class="flex-shrink-0" src="./images/phone.svg" alt="">
                         <span class="xl:flex hidden">+7 (495) 955-18-14</span>
                     </a>
+                    <button class="burger lg:hidden flex relative z-40">
+                        <svg class="open" width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="0.5" width="30" height="3" rx="1" fill="#ffffff"/>
+                            <rect y="8.5" width="30" height="3" rx="1" fill="#ffffff"/>
+                            <rect y="16.5" width="30" height="3" rx="1" fill="#ffffff"/>
+                        </svg>
+                        <svg class="close hidden" width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L13 1M13 13L1 1" stroke="#ffffff" stroke-linecap="round"/>
+                        </svg>
+                    </button>
                 </div>
                 <div class="h-[1px] w-full bg-stone-700 xl:mt-6 mt-3"></div>
+            </div>
+            <div class="media_menu bg-black hidden p-7 pt-32 fixed top-0 left-0 w-full h-full z-30">
+                <ul class="flex items-center flex-col gap-6 text-sm uppercase">
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white" href="#">АВТОМОБИЛИ С ПРОБЕГОМ</a>
+                    </li>
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white"" href="#">Автокредит</a>
+                    </li>
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white"" href="#">О компании</a>
+                    </li>
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white"" href="#">Обмен</a>
+                    </li>
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white"" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn-red flex justify-center mt-5 items-center gap-[10px] h-11 xl:px-6 px-4">
+                    <img class="flex-shrink-0" src="./images/phone.svg" alt="">
+                    <span>+7 (495) 955-18-14</span>
+                </a>
             </div>
         </header>
 
@@ -203,23 +237,35 @@
             <section class="xl:mb-8 mb-12">
                 <div class="container xl:px-14 px-0">
                     <h2 class="text-[#010101] xl:text-4xl text-2xl font-druk-text-wide font-medium uppercase mb-8">Банки Партнеры</h2>
-                    <ul class="flex items-stretch gap-3 mb-8">
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
-                            <img src="./images/partner-1.svg" alt="">
-                        </li>
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
-                            <img src="./images/partner-2.svg" alt="">
-                        </li>
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
-                            <img src="./images/partner-3.svg" alt="">
-                        </li>
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
-                            <img src="./images/partner-4.svg" alt="">
-                        </li>
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
-                            <img src="./images/partner-5.svg" alt="">
-                        </li>
-                    </ul>
+                    <div class="swiper bankSwiper">
+                        <div class="swiper-wrapper mb-8">
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-1.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-2.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-3.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-4.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-5.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <p class="text-stone-700 text-sm">Многие наши клиенты уже убедились, что совсем не обязательно экономить на себе для того, чтобы через год-два стать счастливым обладателем автомобиля. Чтобы мечта стала реальностью уже сегодня, можно просто купить авто в кредит. Обратитесь в кредитный отдел нашей компании и уже сегодня вы можете стать владельцем автомобиля! Для Вашего удобства ежедневно в салоне работают менеджеры по кредиту, которые предоставят исчерпывающую информацию по покупке автомобиля в кредит и будут сопровождать Вас на всех этапах получения кредита. Астар Моторс предлагает автокредиты в Москве на выгодных условиях!</p>
                 </div>
             </section>
@@ -287,27 +333,27 @@
             <section class="xl:mb-32 mb-12">
                 <ul class="container xl:px-14 px-0 flex flex-wrap gap-3">
                     <li class="bg-stone-900 text-white lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] h-[256px] p-8 xl:rounded-3xl rounded-2xl block relative z-[1] overflow-hidden">
-                        <p>Ставка по кредиту от 4,9%</p>
+                        <p class="font-normal text-white xl:leading-6 leading-5 xl:text-2xl text-xl">Ставка по кредиту от 4,9%</p>
                         <img src="./images/card-1.png" alt="" class="absolute right-0 bottom-0 z-[-1]">
                     </li>
                     <li class="bg-stone-900 text-white lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] h-[256px] p-8 xl:rounded-3xl rounded-2xl block relative z-[1] overflow-hidden">
-                        <p>0% первоначальный взнос</p>
+                        <p class="font-normal text-white xl:leading-6 leading-5 xl:text-2xl text-xl">0% первоначальный взнос</p>
                         <img src="./images/card-2.png" alt="" class="absolute right-0 bottom-0 z-[-1]">
                     </li>
                     <li class="bg-stone-900 text-white lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] h-[256px] p-8 xl:rounded-3xl rounded-2xl block relative z-[1] overflow-hidden">
-                        <p>Срок кредита до 8 лет</p>
+                        <p class="font-normal text-white xl:leading-6 leading-5 xl:text-2xl text-xl">Срок кредита до 8 лет</p>
                         <img src="./images/card-3.png" alt="" class="absolute right-0 bottom-0 z-[-1]">
                     </li>
                     <li class="bg-stone-900 text-white lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] h-[256px] p-8 xl:rounded-3xl rounded-2xl block relative z-[1] overflow-hidden">
-                        <p>По паспорту и правам</p>
+                        <p class="font-normal text-white xl:leading-6 leading-5 xl:text-2xl text-xl">По паспорту и правам</p>
                         <img src="./images/card-4.png" alt="" class="absolute right-0 bottom-0 z-[-1]">
                     </li>
                     <li class="bg-stone-900 text-white lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] h-[256px] p-8 xl:rounded-3xl rounded-2xl block relative z-[1] overflow-hidden">
-                        <p>Trade-In как первый взнос</p>
+                        <p class="font-normal text-white xl:leading-6 leading-5 xl:text-2xl text-xl">Trade-In как первый взнос</p>
                         <img src="./images/card-5.png" alt="" class="absolute right-0 bottom-0 z-[-1]">
                     </li>
                     <li class="bg-stone-900 text-white lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] h-[256px] p-8 xl:rounded-3xl rounded-2xl block relative z-[1] overflow-hidden">
-                        <p>Госпрограммы льготного автокредитования</p>
+                        <p class="font-normal text-white xl:leading-6 leading-5 xl:text-2xl text-xl">Госпрограммы льготного автокредитования</p>
                         <img src="./images/card-6.png" alt="" class="absolute right-0 bottom-0 z-[-1]">
                     </li>
                 </ul>
@@ -406,6 +452,7 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

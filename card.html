@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body class="font-idealist-sans font-normal bg-stone-200">
-    
+<body class="font-idealist-sans font-normal bg-stone-200 body">
+
     <div class="w-full overflow-hidden">
 
         <header class="pt-6 w-full">
-            <div class="container px-14 py-[34px] text-white bg-black rounded-3xl">
+            <div class="container xl:px-14 px-7 xl:py-[34px] py-[20px] text-white bg-black xl:rounded-3xl rounded-2xl">
                 <div class="flex items-center justify-between">
-                    <a href="/">
+                    <a href="/" class="relative z-40">
                         <img src="./images/header-logo.svg" alt="">
                     </a>
-                    <ul class="flex items-center gap-6 text-sm uppercase">
+                    <ul class="lg:flex hidden items-center gap-6 text-sm uppercase">
                         <li>
                             <a href="#">АВТОМОБИЛИ С ПРОБЕГОМ</a>
                         </li>
@@ -33,92 +34,125 @@
                             <a href="#">Контакты</a>
                         </li>
                     </ul>
-                    <a href="#" class="btn-red flex items-center gap-[10px] h-11 px-6">
-                        <img src="./images/phone.svg" alt="">
-                        <span>+7 (495) 955-18-14</span>
+                    <a href="#" class="btn-red lg:flex hidden items-center gap-[10px] h-11 xl:px-6 px-4">
+                        <img class="flex-shrink-0" src="./images/phone.svg" alt="">
+                        <span class="xl:flex hidden">+7 (495) 955-18-14</span>
                     </a>
+                    <button class="burger lg:hidden flex relative z-40">
+                        <svg class="open" width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="0.5" width="30" height="3" rx="1" fill="#ffffff"/>
+                            <rect y="8.5" width="30" height="3" rx="1" fill="#ffffff"/>
+                            <rect y="16.5" width="30" height="3" rx="1" fill="#ffffff"/>
+                        </svg>
+                        <svg class="close hidden" width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L13 1M13 13L1 1" stroke="#ffffff" stroke-linecap="round"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
+            <div class="media_menu bg-black hidden p-7 pt-32 fixed top-0 left-0 w-full h-full z-30">
+                <ul class="flex items-center flex-col gap-6 text-sm uppercase">
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white" href="#">АВТОМОБИЛИ С ПРОБЕГОМ</a>
+                    </li>
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white"" href="#">Автокредит</a>
+                    </li>
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white"" href="#">О компании</a>
+                    </li>
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white"" href="#">Обмен</a>
+                    </li>
+                    <li>
+                        <a class="font-normal text-sm leading-4 text-white"" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn-red flex justify-center mt-5 items-center gap-[10px] h-11 xl:px-6 px-4">
+                    <img class="flex-shrink-0" src="./images/phone.svg" alt="">
+                    <span>+7 (495) 955-18-14</span>
+                </a>
+            </div>
         </header>
-        
+
         <main>
 
             <section class="mb-[77px]">
                 <div class="container">
-                    <div class="px-14 pt-7">
-                        <p class="mb-16 text-neutral-700 text-sm"><span class="underline">Авто в наличии в Москве / Kia / Sorento /</span> Kia Sorento I Рестайлинг , автокредит и рассрочка в автоцентре «Астар Моторс»</p>
-                        <h2 class="text-[#010101] text-4xl font-druk-text-wide font-medium uppercase mb-8">Заявка на автокредит в Москве</h2>
+                    <div class="xl:px-14 px-0 pt-7">
+                        <p class="xl:mb-16 mb-8 text-neutral-700 text-sm"><span class="underline">Авто в наличии в Москве / Kia / Sorento /</span> Kia Sorento I Рестайлинг , автокредит и рассрочка в автоцентре «Астар Моторс»</p>
+                        <h2 class="text-[#010101] xl:text-4xl text-2xl font-druk-text-wide font-medium uppercase mb-8">Заявка на автокредит в Москве</h2>
                         <p class="text-black text-sm mb-6">2.5d АТ (170 л.с.), дизель, автомат, внедорожник 5д., 243 120 км, полный, черный</p>
                     </div>
-                    <div class="flex items-stretch rounded-3xl gap-0 overflow-hidden">
-                        <div class="w-1/2">
+                    <div class="flex items-stretch xl:rounded-3xl rounded-2xl flex-col xl:flex-row gap-0 overflow-hidden">
+                        <div class="xl:w-1/2 w-full">
                             <img src="./images/example-1.png" alt="" class="w-full h-full object-cover">
                         </div>
-                        <div class="w-1/2">
+                        <div class="xl:w-1/2 w-full">
                             <img src="./images/example-1.png" alt="" class="w-full h-full object-cover">
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="mb-16">
-                <div class="container p-14 bg-stone-50 rounded-3xl flex items-start">
-                    <div class="w-1/2 pr-16">
-                        <div class="flex items-start gap-[10px] mb-12">
-                            <h3 class="font-druk-text-wide uppercase text-4xl font-medium text-[#010101]">от 588 000 ₽</h3>
+            <section class="xl:mb-16 mb-12">
+                <div class="container xl:p-14 p-7 bg-stone-50 xl:rounded-3xl rounded-2xl flex xl:flex-row flex-col items-start">
+                    <div class="xl:w-1/2 w-full xl:pr-16 pr-0">
+                        <div class="flex items-start gap-[10px] md:flex-row flex-col xl:mb-12 mb-6">
+                            <h3 class="font-druk-text-wide uppercase xl:text-4xl text-2xl font-medium text-[#010101]">от 588 000 ₽</h3>
                             <del class="text-[#484848] font-medium text-xl font-druk-text-wide leading-[15px]">824 000 ₽</del>
                         </div>
                         <div class="flex flex-wrap items-center gap-x-3 gap-y-4 mb-12">
-                            <a href="#" class="btn-red w-[calc(50%_-_6px)] flex items-center justify-center h-[52px]">Оставить заявку онлайн</a>
-                            <a href="#" class="btn-dark-border w-[calc(50%_-_6px)] flex items-center justify-center h-[52px] gap-[10px]">
+                            <a href="#" class="btn-red md:w-[calc(50%_-_6px)] w-full flex items-center justify-center h-[52px]">Оставить заявку онлайн</a>
+                            <a href="#" class="btn-dark-border md:w-[calc(50%_-_6px)] w-full flex items-center justify-center h-[52px] gap-[10px]">
                                 <span>Проверить VIN</span>
                                 <img src="./images/vin.svg" alt="">
                             </a>
-                            <a href="#" class="btn-red w-[calc(50%_-_6px)] flex items-center justify-center h-[52px]">Заявка на кредит</a>
-                            <a href="#" class="btn-red w-[calc(50%_-_6px)] flex items-center justify-center h-[52px]">Заявка на Trade-in</a>
+                            <a href="#" class="btn-red md:w-[calc(50%_-_6px)] w-full flex items-center justify-center h-[52px]">Заявка на кредит</a>
+                            <a href="#" class="btn-red md:w-[calc(50%_-_6px)] w-full flex items-center justify-center h-[52px]">Заявка на Trade-in</a>
                         </div>
-                        <h3 class="mb-12 font-druk-text-wide text-4xl text-[#010101] uppercase">Основные характеристики:</h3>
-                        <ul class="flex flex-wrap gap-y-12 gap-x-4">
-                            <li class="w-[calc(100%_/_3_-_32px_/_3)]">
+                        <h3 class="mb-12 font-druk-text-wide xl:text-4xl text-2xl text-[#010101] uppercase">Основные характеристики:</h3>
+                        <ul class="flex flex-wrap xl:gap-y-12 gap-y-4 gap-x-4">
+                            <li class="md:w-[calc(100%_/_3_-_32px_/_3)] w-[calc(100%_/_2_-_8px)]">
                                 <img src="./images/card-icon-1.svg" alt="">
-                                <p class="text-base text-black mt-6">Внедорожник</p>
+                                <p class="text-base text-black xl:mt-6 mt-3">Внедорожник</p>
                             </li>
-                            <li class="w-[calc(100%_/_3_-_32px_/_3)]">
+                            <li class="md:w-[calc(100%_/_3_-_32px_/_3)] w-[calc(100%_/_2_-_8px)]">
                                 <img src="./images/card-icon-2.svg" alt="">
-                                <p class="text-base text-black mt-6">Дизель</p>
+                                <p class="text-base text-black xl:mt-6 mt-3">Дизель</p>
                             </li>
-                            <li class="w-[calc(100%_/_3_-_32px_/_3)]">
+                            <li class="md:w-[calc(100%_/_3_-_32px_/_3)] w-[calc(100%_/_2_-_8px)]">
                                 <img src="./images/card-icon-3.svg" alt="">
-                                <p class="text-base text-black mt-6">2.5 л., 170 л. с.</p>
+                                <p class="text-base text-black xl:mt-6 mt-3">2.5 л., 170 л. с.</p>
                             </li>
-                            <li class="w-[calc(100%_/_3_-_32px_/_3)]">
+                            <li class="md:w-[calc(100%_/_3_-_32px_/_3)] w-[calc(100%_/_2_-_8px)]">
                                 <img src="./images/card-icon-4.svg" alt="">
-                                <p class="text-base text-black mt-6">Автомат</p>
+                                <p class="text-base text-black xl:mt-6 mt-3">Автомат</p>
                             </li>
-                            <li class="w-[calc(100%_/_3_-_32px_/_3)]">
+                            <li class="md:w-[calc(100%_/_3_-_32px_/_3)] w-[calc(100%_/_2_-_8px)]">
                                 <img src="./images/card-icon-5.svg" alt="">
-                                <p class="text-base text-black mt-6">Полный</p>
+                                <p class="text-base text-black xl:mt-6 mt-3">Полный</p>
                             </li>
-                            <li class="w-[calc(100%_/_3_-_32px_/_3)]">
+                            <li class="md:w-[calc(100%_/_3_-_32px_/_3)] w-[calc(100%_/_2_-_8px)]">
                                 <img src="./images/card-icon-6.svg" alt="">
-                                <p class="text-base text-black mt-6">243 120 км.</p>
+                                <p class="text-base text-black xl:mt-6 mt-3">243 120 км.</p>
                             </li>
-                            <li class="w-[calc(100%_/_3_-_32px_/_3)]">
+                            <li class="md:w-[calc(100%_/_3_-_32px_/_3)] w-[calc(100%_/_2_-_8px)]">
                                 <img src="./images/card-icon-7.svg" alt="">
-                                <p class="text-base text-black mt-6">Черный</p>
+                                <p class="text-base text-black xl:mt-6 mt-3">Черный</p>
                             </li>
-                            <li class="w-[calc(100%_/_3_-_32px_/_3)]">
+                            <li class="md:w-[calc(100%_/_3_-_32px_/_3)] w-[calc(100%_/_2_-_8px)]">
                                 <img src="./images/card-icon-8.svg" alt="">
-                                <p class="text-base text-black mt-6">2009 г.</p>
+                                <p class="text-base text-black xl:mt-6 mt-3">2009 г.</p>
                             </li>
-                            <li class="w-[calc(100%_/_3_-_32px_/_3)]">
+                            <li class="md:w-[calc(100%_/_3_-_32px_/_3)] w-[calc(100%_/_2_-_8px)]">
                                 <img src="./images/card-icon-9.svg" alt="">
-                                <p class="text-base text-black mt-6">2 владельца</p>
+                                <p class="text-base text-black xl:mt-6 mt-3">2 владельца</p>
                             </li>
                         </ul>
                     </div>
-                    <div class="w-1/2 px-8 pt-8">
-                        <h3 class="mb-[42px] text-black font-druk-text-wide text-xl">Дополнительная информация</h3>
+                    <div class="xl:w-1/2 w-full xl:px-8 pt-8">
+                        <h3 class="xl:mb-[42px] mb-[21px] text-black font-druk-text-wide text-xl">Дополнительная информация</h3>
                         <div class="text-sm text-black font-normal">
                             <p >
                                 Гарантия 2 года на двигатель и КПП . Техническое состояние подтверждено диагностикой. <br>
@@ -149,51 +183,69 @@
                 </div>
             </section>
 
-            <section class="mb-16">
-                <div class="container px-14">
-                    <h2 class="text-[#010101] text-4xl font-druk-text-wide font-medium uppercase mb-8">Предложения банков</h2>
-                    <ul class="flex items-stretch gap-3">
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 rounded-3xl">
-                            <img src="./images/partner-1.svg" alt="">
-                        </li>
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 rounded-3xl">
-                            <img src="./images/partner-2.svg" alt="">
-                        </li>
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 rounded-3xl">
-                            <img src="./images/partner-3.svg" alt="">
-                        </li>
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 rounded-3xl">
-                            <img src="./images/partner-4.svg" alt="">
-                        </li>
-                        <li class="w-full h-32 flex items-center justify-center bg-stone-50 rounded-3xl">
-                            <img src="./images/partner-5.svg" alt="">
-                        </li>
-                    </ul>
+            <section class="xl:mb-16 mb-12">
+                <div class="container xl:px-14 px-0">
+                    <h2 class="text-[#010101] xl:text-4xl text-2xl font-druk-text-wide font-medium uppercase mb-8">Предложения банков</h2>
+                    <div class="swiper bankSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-1.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-2.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-3.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-4.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="w-full xl:h-32 h-28 flex items-center justify-center bg-stone-50 xl:rounded-3xl rounded-2xl">
+                                    <img src="./images/partner-5.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section class="mb-16">
-                <ul class="container px-14 flex flex-wrap gap-3">
-                    <li class="bg-stone-900 text-white w-[calc(100%_/_3_-_8px)] h-[256px] p-8 rounded-3xl block relative z-[1] overflow-hidden">
-                        <p>Ставка по кредиту от 4,9%</p>
+            <section class="xl:mb-16 mb-12">
+                <ul class="container xl:px-14 px-0 flex flex-wrap gap-3">
+                    <li class="bg-stone-900 text-white lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] h-[256px] p-8 xl:rounded-3xl rounded-2xl block relative z-[1] overflow-hidden">
+                        <p class="font-normal text-white xl:leading-6 leading-5 xl:text-2xl text-xl">
+                            Скидка до 240 000 р.
+                        </p>
                         <img src="./images/card-1.png" alt="" class="absolute right-0 bottom-0 z-[-1]">
                     </li>
-                    <li class="bg-stone-900 text-white w-[calc(100%_/_3_-_8px)] h-[256px] p-8 rounded-3xl block relative z-[1] overflow-hidden">
-                        <p>0% первоначальный взнос</p>
+                    <li class="bg-stone-900 text-white lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] h-[256px] p-8 xl:rounded-3xl rounded-2xl block relative z-[1] overflow-hidden">
+                        <p class="font-normal text-white xl:leading-6 leading-5 xl:text-2xl text-xl">
+                            0% первоначальный взнос
+                        </p>
                         <img src="./images/card-2.png" alt="" class="absolute right-0 bottom-0 z-[-1]">
                     </li>
-                    <li class="bg-stone-900 text-white w-[calc(100%_/_3_-_8px)] h-[256px] p-8 rounded-3xl block relative z-[1] overflow-hidden">
-                        <p>Срок кредита до 8 лет</p>
+                    <li class="bg-stone-900 text-white lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] h-[256px] p-8 xl:rounded-3xl rounded-2xl block relative z-[1] overflow-hidden">
+                        <p class="font-normal text-white xl:leading-6 leading-5 xl:text-2xl text-xl">
+                            Кредит по двум документам
+                        </p>
                         <img src="./images/card-3.png" alt="" class="absolute right-0 bottom-0 z-[-1]">
                     </li>
                 </ul>
             </section>
 
-            <section class="mb-16">
-                <div class="container px-14">
-                    <h2 class="text-[#010101] text-4xl font-druk-text-wide font-medium uppercase mb-8">Похожие предложения</h2>
+            <section class="xl:mb-16 mb-12">
+                <div class="container xl:px-14 px-0">
+                    <h2 class="text-[#010101] xl:text-4xl text-2xl font-druk-text-wide font-medium uppercase mb-8">Похожие предложения</h2>
                     <ul class="flex flex-wrap items-stretch gap-3">
-                        <li class="w-[calc(100%_/_3_-_8px)] bg-white px-8 pt-8 pb-[30px] rounded-3xl flex flex-col gap-5">
+                        <li class="lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] xl:rounded-3xl rounded-2xl bg-white xl:px-8 px-4 xl:pt-8 pt-4 xl:pb-[30px] pb-[15px] flex flex-col gap-5">
                             <div class="h-[210px] w-full rounded-[10px] overflow-hidden">
                                 <img src="./images/car.png" alt="" class="w-full h-full object-cover">
                             </div>
@@ -203,7 +255,7 @@
                             <h3 class="text-red-600 text-2xl leading-[100%]">от 1 084 000 ₽</h3>
                             <a href="#" class="btn-red w-full h-[52px] flex items-center justify-center">Оставить заявку онлайн</a>
                         </li>
-                        <li class="w-[calc(100%_/_3_-_8px)] bg-white px-8 pt-8 pb-[30px] rounded-3xl flex flex-col gap-5">
+                        <li class="lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] xl:rounded-3xl rounded-2xl bg-white xl:px-8 px-4 xl:pt-8 pt-4 xl:pb-[30px] pb-[15px] flex flex-col gap-5">
                             <div class="h-[210px] w-full rounded-[10px] overflow-hidden">
                                 <img src="./images/car.png" alt="" class="w-full h-full object-cover">
                             </div>
@@ -213,7 +265,7 @@
                             <h3 class="text-red-600 text-2xl leading-[100%]">от 1 084 000 ₽</h3>
                             <a href="#" class="btn-red w-full h-[52px] flex items-center justify-center">Оставить заявку онлайн</a>
                         </li>
-                        <li class="w-[calc(100%_/_3_-_8px)] bg-white px-8 pt-8 pb-[30px] rounded-3xl flex flex-col gap-5">
+                        <li class="lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] xl:rounded-3xl rounded-2xl bg-white xl:px-8 px-4 xl:pt-8 pt-4 xl:pb-[30px] pb-[15px] flex flex-col gap-5">
                             <div class="h-[210px] w-full rounded-[10px] overflow-hidden">
                                 <img src="./images/car.png" alt="" class="w-full h-full object-cover">
                             </div>
@@ -223,7 +275,7 @@
                             <h3 class="text-red-600 text-2xl leading-[100%]">от 1 084 000 ₽</h3>
                             <a href="#" class="btn-red w-full h-[52px] flex items-center justify-center">Оставить заявку онлайн</a>
                         </li>
-                        <li class="w-[calc(100%_/_3_-_8px)] bg-white px-8 pt-8 pb-[30px] rounded-3xl flex flex-col gap-5">
+                        <li class="lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] xl:rounded-3xl rounded-2xl bg-white xl:px-8 px-4 xl:pt-8 pt-4 xl:pb-[30px] pb-[15px] flex flex-col gap-5">
                             <div class="h-[210px] w-full rounded-[10px] overflow-hidden">
                                 <img src="./images/car.png" alt="" class="w-full h-full object-cover">
                             </div>
@@ -233,7 +285,7 @@
                             <h3 class="text-red-600 text-2xl leading-[100%]">от 1 084 000 ₽</h3>
                             <a href="#" class="btn-red w-full h-[52px] flex items-center justify-center">Оставить заявку онлайн</a>
                         </li>
-                        <li class="w-[calc(100%_/_3_-_8px)] bg-white px-8 pt-8 pb-[30px] rounded-3xl flex flex-col gap-5">
+                        <li class="lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] xl:rounded-3xl rounded-2xl bg-white xl:px-8 px-4 xl:pt-8 pt-4 xl:pb-[30px] pb-[15px] flex flex-col gap-5">
                             <div class="h-[210px] w-full rounded-[10px] overflow-hidden">
                                 <img src="./images/car.png" alt="" class="w-full h-full object-cover">
                             </div>
@@ -243,7 +295,7 @@
                             <h3 class="text-red-600 text-2xl leading-[100%]">от 1 084 000 ₽</h3>
                             <a href="#" class="btn-red w-full h-[52px] flex items-center justify-center">Оставить заявку онлайн</a>
                         </li>
-                        <li class="w-[calc(100%_/_3_-_8px)] bg-white px-8 pt-8 pb-[30px] rounded-3xl flex flex-col gap-5">
+                        <li class="lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] xl:rounded-3xl rounded-2xl bg-white xl:px-8 px-4 xl:pt-8 pt-4 xl:pb-[30px] pb-[15px] flex flex-col gap-5">
                             <div class="h-[210px] w-full rounded-[10px] overflow-hidden">
                                 <img src="./images/car.png" alt="" class="w-full h-full object-cover">
                             </div>
@@ -257,19 +309,19 @@
                 </div>
             </section>
 
-            <section class="mb-16">
-                <div class="container px-14">
-                    <h2 class="text-[#010101] text-4xl font-druk-text-wide font-medium uppercase mb-8">Отзывы покупателей</h2>
+            <section class="xl:mb-16 mb-12">
+                <div class="container xl:px-14 px-0">
+                    <h2 class="text-[#010101] xl:text-4xl text-2xl font-druk-text-wide font-medium uppercase mb-8">Отзывы покупателей</h2>
                     <ul class="flex flex-wrap items-stretch gap-3">
-                        <li class="w-[calc(100%_/_3_-_8px)] rounded-3xl bg-stone-900 min-h-64 text-white p-8">
+                        <li class="lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] xl:rounded-3xl rounded-2xl bg-stone-900 min-h-64 text-white p-8">
                             <h3 class="text-2xl font-normal mb-[10px]">Иванов Иван</h3>
                             <p class="text-sm font-normal">Все быстро! Очень лояльные проценты по кредиту!  Менеджер, был компетентен по всем вопросом! Процветания и развития Вам</p>
                         </li>
-                        <li class="w-[calc(100%_/_3_-_8px)] rounded-3xl bg-stone-900 min-h-64 text-white p-8">
+                        <li class="lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] xl:rounded-3xl rounded-2xl bg-stone-900 min-h-64 text-white p-8">
                             <h3 class="text-2xl font-normal mb-[10px]">Иванов Иван</h3>
                             <p class="text-sm font-normal">Все быстро! Очень лояльные проценты по кредиту!  Менеджер, был компетентен по всем вопросом! Процветания и развития Вам</p>
                         </li>
-                        <li class="w-[calc(100%_/_3_-_8px)] rounded-3xl bg-stone-900 min-h-64 text-white p-8">
+                        <li class="lg:w-[calc(100%_/_3_-_8px)] md:w-[calc(100%_/_2_-_8px)] w-[calc(100%)] xl:rounded-3xl rounded-2xl bg-stone-900 min-h-64 text-white p-8">
                             <h3 class="text-2xl font-normal mb-[10px]">Иванов Иван</h3>
                             <p class="text-sm font-normal">Все быстро! Очень лояльные проценты по кредиту!  Менеджер, был компетентен по всем вопросом! Процветания и развития Вам</p>
                         </li>
@@ -277,10 +329,10 @@
                 </div>
             </section>
 
-            <section class="mb-16">
-                <div class="container p-14 bg-stone-50 rounded-3xl">
-                    <h2 class="text-[#010101] text-4xl font-druk-text-wide font-medium uppercase mb-12">Преимущества покупки авто в “Астар Моторс”</h2>
-                    <div class="text-sm text-stone-700 pr-14">
+            <section class="xl:mb-16 mb-12">
+                <div class="container xl:p-14 p-5 bg-stone-50 xl:rounded-3xl rounded-2xl">
+                    <h2 class="text-[#010101] xl:text-4xl text-xl font-druk-text-wide font-medium uppercase xl:mb-12 mb-6">Преимущества покупки авто в “Астар Моторс”</h2>
+                    <div class="text-sm text-stone-700 xl:pr-14 pr-0">
                         <p>Приобретение подержанного или нового автомобиля у нас – это наиболее удобный способ покупки транспортного средства. Если вы рассматриваете такой вариант, приглашаем вас в наш автоцентр в Москве. Мы готовы предложить целый ряд выгод от нашего сотрудничества:</p>
                         <ul class="list-disc pl-5">
                             <li>большой ассортимент автомобилей в наличии;</li>
@@ -296,26 +348,28 @@
                 </div>
             </section>
 
-            <section class="mb-[77px]">
+            <section class="xl:mb-[77px] mb-12">
                 <div class="container">
-                    <h2 class="text-[#010101] text-4xl font-druk-text-wide font-medium uppercase mb-8 px-14">Обратная связь</h2>
-                    <div class="bg-black p-14 rounded-3xl overflow-hidden relative z-[1] text-white">
+                    <h2 class="text-[#010101] xl:text-4xl text-2xl font-druk-text-wide font-medium uppercase mb-8 xl:px-14 px-0">Обратная связь</h2>
+                    <div class="bg-black xl:p-14 p-7 xl:rounded-3xl rounded-2xl overflow-hidden relative z-[1] text-white">
                         <h3 class="font-druk-text-wide text-xl leading-[15px] mb-4">Перезвоните мне</h3>
-                        <div class="mb-4">
-                            <label class="text-sm text-stone-700 block mb-2"> Телефон</label>
-                            <div class="max-w-[448px]">
-                                <input type="tel" value="+7 (900) 000-00-00" class="outline-none bg-transparent border border-neutral-300 w-full h-12 rounded-md px-5 text-base text-white">
+                        <form action="#">
+                            <div class="mb-4">
+                                <label class="text-sm text-stone-700 block mb-2"> Телефон</label>
+                                <div class="lg:max-w-[448px] w-full">
+                                    <input type="tel" value="+7 (900) 000-00-00" class="outline-none bg-transparent border border-neutral-300 w-full h-12 rounded-md px-5 text-base text-white">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-checkbox flex items-center gap-2 mb-4">
-                            <input type="checkbox" id="checkbox3" checked class="hidden">
-                            <label for="checkbox3"></label>
-                            <p class="text-[#8D8D8D] text-sm">Соглашаюсь на обработку данных</p>
-                        </div>
-                        <a href="#" class="btn-red inline-flex items-center gap-2 h-[52px] px-8">
-                            <span>Оставить заявку онлайн</span>
-                            <img src="./images/chevron-right.svg" alt="">
-                        </a>
+                            <div class="form-checkbox flex items-center gap-2 mb-4">
+                                <input type="checkbox" id="checkbox3" checked class="hidden">
+                                <label for="checkbox3"></label>
+                                <p class="text-[#8D8D8D] text-sm">Соглашаюсь на обработку данных</p>
+                            </div>
+                            <button type="submit" class="btn-red lg:w-auto w-full justify-center inline-flex items-center gap-2 h-[52px] px-8">
+                                <span>Оставить заявку онлайн</span>
+                                <img src="./images/chevron-right.svg" alt="">
+                            </button>
+                        </form>
                         <img src="./images/contact-bg.png" alt="" class="absolute z-[-1] bottom-0 right-0">
                     </div>
                 </div>
@@ -323,14 +377,14 @@
 
         </main>
 
-        <footer class="pb-[45px]">
-            <div class="container text-white bg-black rounded-3xl px-14 pt-8 pb-[53px] flex flex-col gap-12">
+        <footer class="xl:pb-[45px] mb-4">
+            <div class="container text-white bg-black xl:rounded-3xl rounded-2xl xl:px-14 px-7 pt-8 pb-[53px] flex flex-col xl:gap-12 gap-5">
                 <div>
-                    <div class="flex items-center justify-between">
+                    <div class="flex items-center justify-between flex-col xl:flex-row xl:gap-y-0 gap-y-5">
                         <a href="/">
                             <img src="./images/header-logo.svg" alt="">
                         </a>
-                        <ul class="flex items-center gap-6 text-sm font-normal uppercase">
+                        <ul class="flex items-center gap-6 text-sm font-normal uppercase lg:flex-row flex-col">
                             <li>
                                 <a href="#">АВТОМОБИЛИ С ПРОБЕГОМ</a>
                             </li>
@@ -347,7 +401,7 @@
                                 <a href="#">Контакты</a>
                             </li>
                         </ul>
-                        <a href="#" class="btn-red flex items-center gap[10px] h-11 px-6">
+                        <a href="#" class="btn-red flex items-center gap-[10px] h-11 px-6">
                             <img src="./images/phone.svg" alt="">
                             <span>+7 (495) 955-18-14</span>
                         </a>
@@ -379,7 +433,7 @@
                     <li>Для повышения удобства работы с сайтом компания Астар Моторс использует файлы cookie. В cookie содержатся данные о прошлых посещениях сайта. Если Вы не хотите, чтобы эти данные обрабатывались, отключите cookie в настройках браузера. Соглашение об использование cookies</li>
                     <li>© 2012–2024 Компания «Астар Моторс» оставляет за собой право вносить изменения в информацию, размещенную на сайте Астар Моторс. Подробную информацию о ценах и условиях просьба узнавать по телефону или отправьте заявку на сайте наши менеджеры свяжутся с Вами и расскажут всю интересующую информацию.</li>
                     <li>ООО "АНТАРЕС" ИНН: 9722037461 ОГРН: 1237700001340 КПП: 772201001 Юридический адрес: 109316, г. Москва, вн.тер.г. Муниципальный Округ Текстильщики, пр-кт Волгоградский, д. 47</li>
-                    <li><br></li>                    
+                    <li><br></li>
                     <li>Политика конфиденциальности</li>
                 </ul>
             </div>
@@ -387,6 +441,7 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

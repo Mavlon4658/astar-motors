@@ -84,3 +84,18 @@ input[type="range"]::-moz-slider-thumb {
 .form-checkbox input:checked ~ label::before {
     @apply bg-red-600
 }
+
+
+@media (max-width: 768px) {
+    .btn-red {
+        @apply text-base;
+    }
+
+    .btn-light-border {
+        @apply text-base;
+    }
+
+    .btn-dark-border {
+        @apply text-base;
+    }
+}
